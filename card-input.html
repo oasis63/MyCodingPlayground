@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form>
+
+
+        <label for="card-number">Card number:</label>
+        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required
+            pattern="[0-9]*">
+
+
+
+        <label for="card-name">Name on card:</label>
+        <input type="text" id="card-name" name="card-name" placeholder="John Doe" required>
+
+        <label for="expiry-date">Expiry date:</label>
+        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM / YY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <script>
+
+        const cardNumberInput = document.querySelector('#card-number');
+
+        cardNumberInput.addEventListener('input', (event) => {
+            const input = event.target;
+            const inputValue = input.value.replace(/ /g, ''); // remove any existing spaces
+
+            // Insert a space after every 4 digits using a regular expression and the String.replace() method
+            const formattedValue = inputValue.replace(/(\d{4})/g, '$1 ');
+
+            // Update the input value with the formatted value
+            input.value = formattedValue;
+        });
+
+
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // prevent form submission
+
+            // get input values
+            const cardNumber = document.querySelector('#card-number').value;
+            const cardName = document.querySelector('#card-name').value;
+            const expiryDate = document.querySelector('#expiry-date').value;
+            const cvv = document.querySelector('#cvv').value;
+
+            // validate input values (e.g. check for empty fields or incorrect formats)
+
+            // if input values are valid, submit form
+            form.submit();
+        });
+
+
+    </script>
+
+
+
+</body>
+
+</html>
