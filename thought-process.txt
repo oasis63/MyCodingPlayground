@@ -1,0 +1,28 @@
+1) common db for the participanting users .. to store the messages 
+  ---> superbase .. or .. firebase
+
+2) Broadcast Channel API ....
+  The Broadcast Channel API allows basic communication between 
+  browsing contexts (that is, windows, tabs, frames, or iframes) and workers on the same origin.
+
+3)  
+
+
+
+
+
+
+
+
+
+
+############# Superbase  ############# ----------------
+
+password :   xlNgpomk1e1TUefU
+
+API key  :   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndzZGdmZWF3Z292aGVtamFneWd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIwNTI3MTgsImV4cCI6MTk5NzYyODcxOH0.86C5DXBKt6Vxkz4kMWs6Re42N87WkQtP8HJvplQMLPA
+
+Project URL  :  https://wsdgfeawgovhemjagygx.supabase.co
+
+
+
